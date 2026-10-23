@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { PosterCollage } from './poster-collage'
+import { HeroBackground } from './hero-background'
 
 export function Hero() {
   return (
@@ -15,17 +16,8 @@ export function Hero() {
         backgroundColor: 'var(--bg)',
       }}
     >
-      {/* Subtle background texture */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            'linear-gradient(to bottom right, var(--blue-glow) 0%, transparent 60%)',
-          pointerEvents: 'none',
-        }}
-      />
+      {/* Animated risograph fluid contour background */}
+      <HeroBackground />
 
       <div className="container-main" style={{ width: '100%', position: 'relative', zIndex: 2 }}>
         <div
